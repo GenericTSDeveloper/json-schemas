@@ -57,43 +57,41 @@
                     "maxLength": 64,
                     "pattern": "^[A-Za-z0-9_]+$"
                 },
-                "type": {
-                    "title": "Type",
+                "parameterDataType": {
+                    "title": "Parameter Data Type",
                     "description": "Specifies the parameter's type.",
                     "type": "string",
                     "enum": [
                         "string",
                         "boolean",
-                        "integer",
                         "number"
                     ]
                 },
-                "description": {
-                    "title": "Description",
+                "parameterDescription": {
+                    "title": "Parameter Description",
                     "description": "The description of the parameter.",
                     "type": "string",
                     "maxLength": 512
                 },
-                "required": {
+                "isRequired": {
                     "title": "Required",
                     "description": "Whether the parameter is required. Defaults to false.",
                     "type": "boolean",
                     "default": false
                 },
-                "default": {
-                    "title": "Default",
+                "defaultValue": {
+                    "title": "Default Value",
                     "description": "The default value for an optional parameter.",
                     "type": [
                         "string",
                         "boolean",
-                        "integer",
                         "number"
                     ]
                 }
             },
             "required": [
                 "name",
-                "type"
+                "parameterDataType"
             ],
             "additionalProperties": false
         },
@@ -140,19 +138,19 @@
             "additionalProperties": false
         },
         "stateConfig": {
-            "title": "State configuration",
+            "title": "State Configuration",
             "description": "Instructions for the action in this orchestrator state.",
             "type": "object",
             "properties": {
-                "description": {
-                    "title": "Description",
+                "stateDescription": {
+                    "title": "State Description",
                     "description": "The purpose of the action in this state.",
                     "type": "string",
                     "maxLength": 512
                 }
             },
             "required": [
-                "description"
+                "stateDescription"
             ],
             "additionalProperties": false
         }
