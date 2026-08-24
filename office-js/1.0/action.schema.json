@@ -38,7 +38,7 @@
     "additionalProperties": false,
     "definitions": {
         "parameters": {
-            "title": "Parameters",
+            "title": "Action Parameters",
             "description": "The parameters that can be passed to the action.",
             "type": "array",
             "items": {
